@@ -394,6 +394,10 @@
   min-width: 180px;
 }
 
+.sort-row select {
+  min-width: 140px;
+}
+
 .filter-group {
   display: grid;
   gap: 8px;
@@ -402,6 +406,26 @@
 .filter-group span {
   font-weight: 600;
   color: var(--muted);
+}
+
+.sort-row {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.sort-toggle {
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  border-radius: 8px;
+  padding: 0 12px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.sort-toggle:hover {
+  border-color: rgba(37, 99, 235, 0.5);
+  color: var(--text);
 }
 
 .pill-row {
@@ -525,6 +549,8 @@ select {
 
 .stat-card {
   border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
 }
 
 .project-card .project-year,

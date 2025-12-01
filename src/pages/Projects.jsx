@@ -6,13 +6,15 @@ export function Projects() {
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('date');
+  const [sortField, setSortField] = useState('date');
+  const [sortDirection, setSortDirection] = useState('desc');
 
   const { projects, allTags, allCategories } = useProjects({
     tags: selectedTags.length ? selectedTags : undefined,
     category: selectedCategory !== 'All' ? selectedCategory : undefined,
     searchTerm: searchTerm || undefined,
-    sortBy,
+    sortField,
+    sortDirection,
   });
 
   const tags = useMemo(() => allTags, [allTags]);
@@ -60,10 +62,20 @@ export function Projects() {
             </div>
             <div className="filter-group narrow">
               <span>Sort</span>
-              <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                <option value="date">Date (newest)</option>
-                <option value="title">Title (A-Z)</option>
-              </select>
+              <div className="sort-row">
+                <select value={sortField} onChange={(e) => setSortField(e.target.value)}>
+                  <option value="date">Date</option>
+                  <option value="title">Title</option>
+                </select>
+                <button
+                  type="button"
+                  className="sort-toggle"
+                  onClick={() => setSortDirection((prev) => (prev === 'asc' ? 'desc' : 'asc'))}
+                  aria-label="Toggle sort direction"
+                >
+                  {sortDirection === 'asc' ? '↑' : '↓'}
+                </button>
+              </div>
             </div>
           </div>
 

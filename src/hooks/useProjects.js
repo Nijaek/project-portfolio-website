@@ -26,25 +26,24 @@ const matchesSearch = (project, term) => {
   );
 };
 
-const sortProjects = (projects, sortKey) => {
-  if (sortKey === 'date') {
-    return [...projects].sort((a, b) => (b.year || 0) - (a.year || 0));
+const sortProjects = (projects, sortField, sortDirection = 'desc') => {
+  const dir = sortDirection === 'asc' ? 1 : -1;
+  if (sortField === 'title') {
+    return [...projects].sort((a, b) => a.title.localeCompare(b.title) * dir);
   }
-  if (sortKey === 'title') {
-    return [...projects].sort((a, b) => a.title.localeCompare(b.title));
-  }
-  return projects;
+  // default to date/year sort
+  return [...projects].sort((a, b) => ((a.year || 0) - (b.year || 0)) * dir);
 };
 
-export const useProjects = ({ tags, category, searchTerm, sortBy } = {}) => {
+export const useProjects = ({ tags, category, searchTerm, sortField = 'date', sortDirection = 'desc' } = {}) => {
   const projects = useMemo(() => {
     let results = [...allProjects];
     results = results.filter(
       (project) => matchesTags(project, tags) && matchesCategory(project, category) && matchesSearch(project, searchTerm),
     );
-    results = sortProjects(results, sortBy);
+    results = sortProjects(results, sortField, sortDirection);
     return results;
-  }, [tags, category, searchTerm, sortBy]);
+  }, [tags, category, searchTerm, sortField, sortDirection]);
 
   const getBySlug = useCallback(
     (slug) => allProjects.find((project) => project.slug === slug),
