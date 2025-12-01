@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(/F:\\Applications\\My Files\\Professional/**)"
-    ],
-    "deny": [],
-    "ask": []
-  }
-}
