@@ -32,6 +32,35 @@ Rules:
 - Set `highlighted: true` to feature on the home page.
 - Consistent spelling for `category`/`tags` keeps filters working.
 
+## Project Data Schema
+- Required fields: `id`, `slug`, `title`, `shortDescription`, `fullDescription`, `problem`, `solution`, `architecture`, `challenges`, `results`, `tags` (array of strings), `category`, `techStack` (array of strings), `role`, `year` (number), `githubUrl` (string), `highlighted` (boolean).
+- Optional fields: `liveDemoUrl` (string; use empty string if none).
+- Slugs must be URL-safe (lowercase, hyphenated). `highlighted: true` surfaces the project on the home page.
+
+Example entry:
+```json
+{
+  "id": "p1",
+  "slug": "smart-sprint-analytics",
+  "title": "Smart Sprint Analytics",
+  "shortDescription": "Analytics pipeline that turns Jira exports into delivery and quality dashboards.",
+  "fullDescription": "Built a small data platform that ingests Jira exports, normalizes epics and stories, and publishes velocity, quality, and cycle-time dashboards. Added alerting for scope creep and regression warnings that reduced schedule misses.",
+  "problem": "Teams lacked trustworthy delivery signals across multiple backlogs, causing schedule slips and unclear priorities.",
+  "solution": "Automated ingestion of Jira exports, consistent epic/story taxonomy, and dashboards with trend lines and anomaly alerts.",
+  "architecture": "Node ETL -> PostgreSQL warehouse -> Superset dashboards; event-driven refresh using lightweight cron workers.",
+  "challenges": "Normalizing inconsistent labels and epics across teams; tuning alert thresholds to avoid noise.",
+  "results": "Cut unplanned scope by 18% and improved sprint predictability; dashboards adopted by 4 squads.",
+  "tags": ["Data", "Visualization", "Backend"],
+  "category": "Backend",
+  "techStack": ["TypeScript", "Node.js", "PostgreSQL", "Superset", "Docker"],
+  "role": "Solo",
+  "year": 2025,
+  "githubUrl": "https://github.com/example/smart-sprint-analytics",
+  "liveDemoUrl": "https://example.com/sprint-analytics",
+  "highlighted": true
+}
+```
+
 ## Filters, Tags, and Categories
 - Multi-select tag chips and a category pill bar filter the projects list.
 - Text search checks title and descriptions.

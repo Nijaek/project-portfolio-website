@@ -5,10 +5,7 @@ import { ProjectCard } from '../components/ProjectCard';
 export function Home() {
   const { allProjects } = useProjects();
   const featured = allProjects.filter((project) => project.highlighted).slice(0, 3);
-  const statsByCategory = featured.reduce((acc, project) => {
-    acc[project.category] = (acc[project.category] || 0) + 1;
-    return acc;
-  }, {});
+  const featuredCategories = Array.from(new Set(featured.map((project) => project.category)));
 
   return (
     <div className="page">
@@ -55,7 +52,7 @@ export function Home() {
             <h3>Nijae Ray King</h3>
             <p>Full-stack & data engineer focused on observable, scalable systems.</p>
             <ul>
-              <li>React, Node, Rust, Python</li>
+              <li>React, JavaScript, Python, C++, C#</li>
               <li>APIs, automation, observability</li>
               <li>Impactful portfolios & dashboards</li>
             </ul>
@@ -82,10 +79,8 @@ export function Home() {
           <div className="card stat-card">
             <p className="label">Categories (featured)</p>
             <div className="chip-row">
-              {Object.entries(statsByCategory).map(([cat, count]) => (
-                <span key={cat} className="chip">
-                  {cat}: {count}
-                </span>
+              {featuredCategories.map((cat) => (
+                <span key={cat} className="chip">{cat}</span>
               ))}
             </div>
           </div>
