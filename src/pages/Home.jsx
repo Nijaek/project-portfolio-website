@@ -11,13 +11,15 @@ export function Home() {
     <div className="page">
       <section className="hero">
         <div className="hero-text">
-          <p className="eyebrow">Software Engineer · Data & Systems</p>
+          <p className="eyebrow">Power Platform Engineer ú Automation & Analytics</p>
           <h1>
-            Shipping reliable products with <span className="gradient">speed</span> and{' '}
-            <span className="gradient">clarity</span>.
+            Automating request workflows with <span className="gradient">clarity</span> and{' '}
+            <span className="gradient">impact</span>.
           </h1>
           <p className="lede">
-            I design and build pragmatic software — from polished frontends to resilient backends and observability stacks.
+            Power Platform engineer focused on scaling intake, analytics, and Copilot-assisted workflows. Built
+            enterprise-ready apps and automations with 90k+ internal launches and measurable cost savings. This portfolio
+            stays data-driven so updates happen in minutes.
           </p>
           <div className="cta-row">
             <Link to="/projects" className="btn primary">
@@ -26,7 +28,7 @@ export function Home() {
           </div>
           <div className="stats">
             <div>
-              <strong>Frontend · Backend · ML</strong>
+              <strong>Frontend Ł Backend Ł ML</strong>
               <span>cross-discipline</span>
             </div>
           </div>
@@ -35,11 +37,11 @@ export function Home() {
           <div className="card">
             <p className="eyebrow">About me</p>
             <h3>Nijae Ray King</h3>
-            <p>Full-stack & data engineer focused on observable, scalable systems.</p>
+            <p>Power Platform engineer automating request workflows and scaling operational analytics.</p>
             <ul>
               <li>React, JavaScript, Python, C++, C#</li>
-              <li>APIs, automation, observability</li>
-              <li>Impactful portfolios & dashboards</li>
+              <li>Power Automate, Power Apps, Power BI, Copilot Studio, process automation</li>
+              <li>Request workflows, stakeholder collaboration, measurable outcomes</li>
             </ul>
             <div className="chip-row">
               <span className="chip">Open to work</span>

@@ -66,7 +66,6 @@ export function Resume() {
             <h3>Data & Backend</h3>
             <ul>
               <li>SQL, Python, Java, C++, C#.</li>
-              <li>Scrum/Kanban, requirements to MVP to iteration; Waterfall.</li>
             </ul>
           </div>
           <div className="resume-card">
@@ -74,6 +73,7 @@ export function Resume() {
             <ul>
               <li>Stakeholder communication, requirements discovery, solution walkthroughs.</li>
               <li>Training & enablement, cross-team alignment, workflow clarification.</li>
+              <li>Scrum/Kanban, requirements to MVP to iteration; Waterfall.</li>
             </ul>
           </div>
         </div>
