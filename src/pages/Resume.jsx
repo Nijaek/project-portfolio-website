@@ -34,11 +34,6 @@ export function Resume() {
             <h3>North Chicago, IL</h3>
             <p>Working closely with business stakeholders as part of an internal consulting team.</p>
           </div>
-          <div className="resume-hero-card">
-            <p className="label">Professional Development</p>
-            <h3>Power Platform Conference 2025</h3>
-            <p>Las Vegas — Attendee</p>
-          </div>
         </div>
       </section>
 

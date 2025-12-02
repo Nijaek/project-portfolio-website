@@ -17,29 +17,17 @@ export function Home() {
             <span className="gradient">clarity</span>.
           </h1>
           <p className="lede">
-            I design and build pragmatic software — from resilient backends and observability stacks to
-            polished frontends. This portfolio is data-driven: add or edit projects in one JSON file.
+            I design and build pragmatic software — from polished frontends to resilient backends and observability stacks.
           </p>
           <div className="cta-row">
             <Link to="/projects" className="btn primary">
               View All Projects
             </Link>
-            <a className="text-link" href="mailto:nking0306@gmail.com">
-              Book a call →
-            </a>
           </div>
           <div className="stats">
             <div>
-              <strong>6+</strong>
-              <span>showcased builds</span>
-            </div>
-            <div>
-              <strong>Backend · ML · Frontend</strong>
+              <strong>Frontend · Backend · ML</strong>
               <span>cross-discipline</span>
-            </div>
-            <div>
-              <strong>JSON-first</strong>
-              <span>easy updates</span>
             </div>
           </div>
         </div>
