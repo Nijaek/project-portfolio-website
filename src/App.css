@@ -558,6 +558,105 @@ select {
   color: var(--muted);
 }
 
+.resume-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.resume-hero {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 1.3fr 1fr;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(34, 211, 238, 0.1));
+  box-shadow: var(--shadow);
+}
+
+.resume-hero-content h1 {
+  margin: 8px 0 14px;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.resume-hero-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.resume-hero-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.resume-section {
+  margin-top: 8px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 26px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.resume-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.resume-grid.two-col {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.resume-grid.three-col {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.resume-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.resume-card h3 {
+  margin: 4px 0 8px;
+}
+
+.resume-card p {
+  color: var(--muted);
+}
+
+.resume-card ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+}
+
+.resume-timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.resume-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
 @media (min-width: 800px) {
   .filters {
     align-items: stretch;

@@ -24,9 +24,6 @@ export function Home() {
             <Link to="/projects" className="btn primary">
               View All Projects
             </Link>
-            <a className="btn ghost" href="/resume.pdf" target="_blank" rel="noreferrer">
-              Download Resume
-            </a>
             <a className="text-link" href="mailto:nking0306@gmail.com">
               Book a call →
             </a>
