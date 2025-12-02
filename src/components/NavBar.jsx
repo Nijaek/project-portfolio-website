@@ -9,11 +9,11 @@ export function NavBar() {
       <div className="nav-branding">
         <Link to="/" className="brand-mark">
           <span className="brand-dot" />
-          <span className="brand-text">NRK</span>
+          <span className="brand-text">Nijae King</span>
         </Link>
         <div className="brand-meta">
           <p>Software Engineer</p>
-          <span>Building fast, reliable systems</span>
+          <span>Building fast, reliable solutions</span>
         </div>
       </div>
       <nav className="nav-menu">
