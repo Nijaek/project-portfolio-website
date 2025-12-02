@@ -28,7 +28,7 @@ export function Home() {
           </div>
           <div className="stats">
             <div>
-              <strong>Frontend Ł Backend Ł ML</strong>
+              <strong>Frontend • Backend • ML</strong>
               <span>cross-discipline</span>
             </div>
           </div>
