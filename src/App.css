@@ -325,6 +325,20 @@
   box-shadow: var(--shadow);
 }
 
+.project-thumb {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
 .project-meta {
   display: flex;
   justify-content: space-between;

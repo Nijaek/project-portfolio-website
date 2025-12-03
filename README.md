@@ -26,6 +26,7 @@ Update `src/data/projects.json`. Each project supports:
 - `problem`, `solution`, `architecture`, `challenges`, `results`
 - `tags` (array), `category`, `techStack` (array), `role`
 - `githubUrl`, optional `liveDemoUrl`, `highlighted` (bool)
+- optional `thumbnail` (string path/URL)
 
 Rules:
 - Keep `slug` lowercase and hyphenated for clean URLs.
@@ -34,7 +35,7 @@ Rules:
 
 ## Project Data Schema
 - Required fields: `id`, `slug`, `title`, `shortDescription`, `fullDescription`, `problem`, `solution`, `architecture`, `challenges`, `results`, `tags` (array of strings), `category`, `techStack` (array of strings), `role`, `year` (number), `githubUrl` (string), `highlighted` (boolean).
-- Optional fields: `liveDemoUrl` (string; use empty string if none).
+- Optional fields: `liveDemoUrl` (string; use empty string if none), `thumbnail` (string path/URL; shown on cards if provided).
 - Slugs must be URL-safe (lowercase, hyphenated). `highlighted: true` surfaces the project on the home page.
 
 Example entry:
@@ -57,6 +58,7 @@ Example entry:
   "year": 2025,
   "githubUrl": "https://github.com/example/smart-sprint-analytics",
   "liveDemoUrl": "https://example.com/sprint-analytics",
+  "thumbnail": "/thumbnails/smart-sprint-analytics.jpg",
   "highlighted": true
 }
 ```

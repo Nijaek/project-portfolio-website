@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 export function ProjectCard({ project }) {
   return (
     <article className="project-card">
+      {project.thumbnail && (
+        <div className="project-thumb">
+          <img src={project.thumbnail} alt={`${project.title} thumbnail`} loading="lazy" />
+        </div>
+      )}
       <div className="project-meta">
         <div className="project-year">{project.year}</div>
         <div className="project-category">{project.category}</div>
