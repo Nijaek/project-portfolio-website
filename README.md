@@ -1,6 +1,6 @@
-# React Portfolio
+# React Project Portfolio
 
-Modern, data-driven portfolio site for a software engineer. Projects, tags, and categories are defined in one JSON file so you can add or edit entries without touching React components.
+Modern, data-driven portfolio site built for myself but flexible enough for any software engineer. Projects, tags, and categories are defined in one JSON file so you can add or edit entries without touching React components.
 
 ## Getting Started
 ```bash

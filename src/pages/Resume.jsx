@@ -1,6 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const highlightedBuilds = [
+  {
+    title: 'AI Capabilities Showcase App (Power Apps + Copilot Studio)',
+    description:
+      'Co-developed an AI capabilities application to demonstrate and operationalize Copilot-powered automation use cases for business teams across the organization.',
+    bullets: [
+      'Email parsing to extract key details and auto-populate request forms.',
+      'Audit schedule optimization based on roles, location, and availability.',
+      'Workload forecasting from historical trends.',
+      'Text extraction to capture handwritten or photographed notes to OneNote.',
+      'Request triage with routing, priority, and request type suggestions.',
+      'Knowledge "Ask a Source" agent to query internal documentation in-app.',
+    ],
+  },
+  {
+    title: 'Admin Request Portal (Power Apps + Power Automate + SharePoint)',
+    description:
+      'Designed and deployed a Power Apps Canvas request management system for the Professional Administrators team, supporting 11 distinct request types and handling 600+ requests annually.',
+    bullets: [
+      'Power Automate workflows manage routing, status updates, and overdue reminders.',
+      'Optimized app performance with Concurrent(), on-demand data loading, and column pruning.',
+      'Implemented a shared master reference list for consistent data display while keeping individual sources per form to simplify reporting.',
+    ],
+  },
+  {
+    title: 'Linkster (Power Apps + SharePoint)',
+    description:
+      'Centralized link management app adopted department-wide with 80,000+ launches, enabling structured access to frequently used resources.',
+    bullets: [
+      'Primary app for onboarding, cross-team collaboration, and vendor access.',
+      'Especially valuable for teams on virtual machines without bookmarking, ensuring reliable resource access.',
+    ],
+  },
+  {
+    title: 'MedDRA Version Updates Automation (Power Automate + Excel Online + Office Scripts)',
+    description:
+      'Developed a Power Automate flow leveraging Excel Online scripts to evaluate 200+ SMQ files and auto-generate structured outputs for MedDRA updates.',
+    bullets: [
+      'Delivered a 160x speed increase (40 hours down to 15 minutes).',
+      'Improved data consistency across pharmacovigilance operations.',
+    ],
+  },
+];
 
 export function Resume() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const totalSlides = highlightedBuilds.length;
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % totalSlides);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const handleDotSelect = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <div className="page resume-page">
       <section className="resume-hero">
@@ -211,63 +270,59 @@ export function Resume() {
             <p>Operational apps and automation that improved throughput, transparency, and AI adoption.</p>
           </div>
         </div>
-        <div className="resume-grid two-col">
-          <div className="resume-card">
-            <h3>AI Capabilities Showcase App (Power Apps + Copilot Studio)</h3>
-            <p>
-              Co-developed an AI capabilities application to demonstrate and operationalize Copilot-powered automation use
-              cases for business teams across the organization.
-            </p>
-            <ul>
-              <li>Email parsing to extract key details and auto-populate request forms.</li>
-              <li>Audit schedule optimization based on roles, location, and availability.</li>
-              <li>Workload forecasting from historical trends.</li>
-              <li>Text extraction to capture handwritten or photographed notes to OneNote.</li>
-              <li>Request triage with routing, priority, and request type suggestions.</li>
-              <li>Knowledge “Ask a Source” agent to query internal documentation in-app.</li>
-            </ul>
+        <div className="carousel-shell" aria-label="Highlighted builds carousel">
+          <div
+            className="carousel-track"
+            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          >
+            {highlightedBuilds.map((build, index) => (
+              <article
+                className="resume-card carousel-slide"
+                key={build.title}
+                aria-hidden={activeIndex !== index}
+              >
+                <div className="carousel-meta">
+                  <span className="label">Project {index + 1} of {totalSlides}</span>
+                </div>
+                <h3>{build.title}</h3>
+                <p>{build.description}</p>
+                <ul>
+                  {build.bullets.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
-
-          <div className="resume-card">
-            <h3>Admin Request Portal (Power Apps + Power Automate + SharePoint)</h3>
-            <p>
-              Designed and deployed a Power Apps Canvas request management system for the Professional Administrators team,
-              supporting 11 distinct request types and handling 600+ requests annually.
-            </p>
-            <ul>
-              <li>Power Automate workflows manage routing, status updates, and overdue reminders.</li>
-              <li>Optimized app performance with Concurrent(), on-demand data loading, and column pruning.</li>
-              <li>
-                Implemented a shared master reference list for consistent data display while keeping individual sources per
-                form to simplify reporting.
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume-card">
-            <h3>Linkster (Power Apps + SharePoint)</h3>
-            <p>
-              Centralized link management app adopted department-wide with 80,000+ launches, enabling structured access to
-              frequently used resources.
-            </p>
-            <ul>
-              <li>Primary app for onboarding, cross-team collaboration, and vendor access.</li>
-              <li>
-                Especially valuable for teams on virtual machines without bookmarking, ensuring reliable resource access.
-              </li>
-            </ul>
-          </div>
-
-          <div className="resume-card">
-            <h3>MedDRA Version Updates Automation (Power Automate + Excel Online + Office Scripts)</h3>
-            <p>
-              Developed a Power Automate flow leveraging Excel Online scripts to evaluate 200+ SMQ files and auto-generate
-              structured outputs for MedDRA updates.
-            </p>
-            <ul>
-              <li>Delivered a 160x speed increase (40 hours down to 15 minutes).</li>
-              <li>Improved data consistency across pharmacovigilance operations.</li>
-            </ul>
+          <div className="carousel-controls">
+            <button
+              type="button"
+              className="carousel-button"
+              onClick={handlePrev}
+              aria-label="View previous highlighted build"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <div className="carousel-dots" role="tablist" aria-label="Select highlighted build">
+              {highlightedBuilds.map((build, index) => (
+                <button
+                  key={build.title}
+                  type="button"
+                  className={`carousel-dot ${activeIndex === index ? 'active' : ''}`}
+                  onClick={() => handleDotSelect(index)}
+                  aria-label={`Jump to highlighted build ${index + 1}`}
+                  aria-pressed={activeIndex === index}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              className="carousel-button"
+              onClick={handleNext}
+              aria-label="View next highlighted build"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
           </div>
         </div>
       </section>
