@@ -11,7 +11,7 @@ export function Home() {
     <div className="page">
       <section className="hero">
         <div className="hero-text">
-          <p className="eyebrow">Power Platform Engineer ú Automation & Analytics</p>
+          <p className="eyebrow">Power Platform Engineer, Automation, & Analytics</p>
           <h1>
             Automating request workflows with <span className="gradient">clarity</span> and{' '}
             <span className="gradient">impact</span>.
