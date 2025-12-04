@@ -18,8 +18,7 @@ export function Home() {
           </h1>
           <p className="lede">
             Power Platform engineer focused on scaling intake, analytics, and Copilot-assisted workflows. Built
-            enterprise-ready apps and automations with 90k+ internal launches and measurable cost savings. This portfolio
-            stays data-driven so updates happen in minutes.
+            enterprise-ready apps and automations with 90k+ internal launches and measurable cost savings.
           </p>
           <div className="cta-row">
             <Link to="/projects" className="btn primary">
