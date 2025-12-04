@@ -72,11 +72,14 @@
   letter-spacing: 0.6px;
 }
 
-.brand-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--panel-strong);
+.brand-logo {
+  height: 32px;
+  width: auto;
+}
+
+.brand-mark.logo-only {
+  gap: 0;
+  padding: 10px;
 }
 
 .brand-meta p {

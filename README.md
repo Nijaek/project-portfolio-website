@@ -14,10 +14,10 @@ npm run preview # serve the built site
 - `src/App.jsx` — routes and layout shell
 - `src/pages/` — `Home`, `Projects`, `ProjectDetail`
 - `src/components/` — UI building blocks (nav, footer, cards)
-- `src/data/projects.json` — single source of truth for all project content
-- `src/hooks/useProjects.js` — filtering, search, and sorting helpers
-- `src/App.css` & `src/index.css` — global styles and theme tokens
-- `public/` — static assets (add `resume.pdf` here)
+- `src/data/projects.json` - single source of truth for all project content
+- `src/hooks/useProjects.js` - filtering, search, and sorting helpers
+- `src/App.css` & `src/index.css` - global styles and theme tokens
+- `public/` - static assets (add `resume.pdf` and your `logo.png` here)
 
 ## Editing / Adding Projects
 Update `src/data/projects.json`. Each project supports:
@@ -77,5 +77,5 @@ Example entry:
   - **GitHub Pages**: `npm run build` then serve `dist` with a static host (e.g., `gh-pages` branch via an action).
 
 ## Notes
-- Add your `public/resume.pdf` and adjust social links in `src/components/NavBar.jsx` and `src/components/Footer.jsx`.
+- Add your `public/resume.pdf`, your logo at `public/logo.png`, and adjust social links in `src/components/NavBar.jsx` and `src/components/Footer.jsx`.
 - Run `npm run build` before sharing links to confirm routing and data changes render correctly.
