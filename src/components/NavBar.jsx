@@ -23,9 +23,6 @@ export function NavBar() {
         <NavLink to="/projects" className={navLinkClass}>
           Projects
         </NavLink>
-        <NavLink to="/resume" className={navLinkClass}>
-          Resume
-        </NavLink>
         <a className="nav-link nav-link-cta" href="mailto:nking0306@gmail.com">
           Contact
         </a>

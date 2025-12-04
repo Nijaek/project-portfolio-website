@@ -232,6 +232,19 @@
   border-color: rgba(255, 255, 255, 0.5);
 }
 
+.btn.download {
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.btn.download:hover {
+  border-color: rgba(37, 99, 235, 0.7);
+  background: rgba(37, 99, 235, 0.14);
+  transform: translateY(-1px);
+}
+
 .text-link {
   color: var(--accent);
   font-weight: 600;
@@ -570,178 +583,6 @@ select {
 .project-card .project-year,
 .project-card .project-category {
   color: var(--muted);
-}
-
-.resume-page {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.resume-hero {
-  display: grid;
-  gap: 22px;
-  grid-template-columns: 1.3fr 1fr;
-  padding: 32px;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(34, 211, 238, 0.1));
-  box-shadow: var(--shadow);
-}
-
-.resume-hero-content h1 {
-  margin: 8px 0 14px;
-  font-size: clamp(30px, 4vw, 42px);
-}
-
-.resume-hero-grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.resume-hero-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: var(--shadow);
-}
-
-.resume-section {
-  margin-top: 8px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 26px;
-  background: var(--panel);
-  box-shadow: var(--shadow);
-}
-
-.resume-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.resume-grid.two-col {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.resume-grid.three-col {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.carousel-shell {
-  position: relative;
-  overflow: hidden;
-  margin-top: 12px;
-}
-
-.carousel-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-  gap: 0;
-  transition: transform 0.4s ease;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  padding: 0 8px;
-  box-sizing: border-box;
-}
-
-.resume-card {
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 18px;
-  background: var(--card-bg);
-  box-shadow: var(--shadow);
-}
-
-.resume-card h3 {
-  margin: 4px 0 8px;
-}
-
-.resume-card p {
-  color: var(--muted);
-}
-
-.resume-card ul {
-  margin: 10px 0 0;
-  padding-left: 20px;
-  color: var(--muted);
-  display: grid;
-  gap: 8px;
-}
-
-.carousel-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.carousel-button {
-  border: 1px solid var(--line);
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--text);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: border 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-
-.carousel-button:hover {
-  border-color: rgba(37, 99, 235, 0.5);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-}
-
-.carousel-dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s, border 0.2s;
-}
-
-.carousel-dot.active {
-  background: var(--accent);
-  border-color: rgba(37, 99, 235, 0.6);
-  transform: scale(1.05);
-}
-
-.carousel-meta {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 6px;
-}
-
-.resume-timeline {
-  display: grid;
-  gap: 14px;
-}
-
-.resume-card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 6px;
 }
 
 .muted {

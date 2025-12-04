@@ -6,7 +6,6 @@ import { ThemeToggle } from './components/ThemeToggle';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
 import { ProjectDetail } from './pages/ProjectDetail';
-import { Resume } from './pages/Resume';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route
             path="*"

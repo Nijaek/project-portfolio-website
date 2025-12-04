@@ -25,6 +25,9 @@ export function Home() {
             <Link to="/projects" className="btn primary">
               View All Projects
             </Link>
+            <a className="btn download" href="/resume.pdf" download>
+              Download resume
+            </a>
           </div>
           <div className="stats">
             <div>
@@ -43,10 +46,6 @@ export function Home() {
               <li>Power Automate, Power Apps, Power BI, Copilot Studio, process automation</li>
               <li>Request workflows, stakeholder collaboration, measurable outcomes</li>
             </ul>
-            <div className="chip-row">
-              <span className="chip">Open to work</span>
-              <span className="chip">Remote / Hybrid</span>
-            </div>
           </div>
         </div>
       </section>
