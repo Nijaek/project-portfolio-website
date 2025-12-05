@@ -21,7 +21,7 @@ export function Home() {
             enterprise-ready apps and automations with 90k+ internal launches and measurable cost savings.
           </p>
           <div className="cta-row">
-            <Link to="/projects" className="btn primary">
+            <Link to="/projects" className="btn download">
               View All Projects
             </Link>
             <a className="btn download" href="/resume.pdf" download>
@@ -43,7 +43,7 @@ export function Home() {
             <ul>
               <li>React, JavaScript, Python, C++, C#</li>
               <li>Power Automate, Power Apps, Power BI, Copilot Studio, process automation</li>
-              <li>Request workflows, stakeholder collaboration, measurable outcomes</li>
+              <li>Scrum, Agile, Waterfall, stakeholder management, requirements gathering & translation</li>
             </ul>
           </div>
         </div>

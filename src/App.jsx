@@ -6,6 +6,7 @@ import { ThemeToggle } from './components/ThemeToggle';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
 import { ProjectDetail } from './pages/ProjectDetail';
+import { SHOW_THEME_TOGGLE } from './config/themeConfig';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <ThemeToggle />
+      {SHOW_THEME_TOGGLE && <ThemeToggle />}
     </div>
   );
 }

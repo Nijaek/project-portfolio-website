@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
+import { DEFAULT_THEME, SHOW_THEME_TOGGLE } from '../config/themeConfig';
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState(document.documentElement.getAttribute('data-theme') || 'light');
+  if (!SHOW_THEME_TOGGLE) return null;
+
+  const [theme, setTheme] = useState(
+    document.documentElement.getAttribute('data-theme') || DEFAULT_THEME,
+  );
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
