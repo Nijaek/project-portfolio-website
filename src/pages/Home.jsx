@@ -24,7 +24,7 @@ export function Home() {
             <Link to="/projects" className="btn download">
               View All Projects
             </Link>
-            <a className="btn download" href="/resume.pdf" download>
+            <a className="btn download" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               Download resume
             </a>
           </div>
