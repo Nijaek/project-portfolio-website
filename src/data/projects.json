@@ -17,7 +17,28 @@
     "year": 2025,
     "githubUrl": "https://github.com/Nijaek/project-portfolio-website",
     "liveDemoUrl": "",
-    "thumbnail": "",
+    "thumbnail": "/src/assets/react-portfolio-thumbnail.png",
+    "highlighted": true
+  },
+  {
+    "id": "p2",
+    "slug": "algorithm-visualizer",
+    "title": "Algorithm Visualizer",
+    "shortDescription": "Interactive web platform for visualizing algorithms across sorting, pathfinding, graph, data structures, and machine learning.",
+    "fullDescription": "Comprehensive algorithm visualization platform built with React and TypeScript that brings complex algorithms to life through step-by-step animations. Features 5 main categories with 20+ algorithms including sorting algorithms, pathfinding algorithms, graph algorithms, data structures, and machine learning algorithms. Each visualization includes real-time complexity analysis and interactive controls.",
+    "problem": "Learning algorithms from textbooks provides static examples without seeing how data structures evolve during execution.",
+    "solution": "Created an interactive platform that visualizes algorithm execution step-by-step with animations, allowing users to control speed, pause, and see complexity metrics in real-time.",
+    "architecture": "React + TypeScript front end with Vite; modular algorithm implementations; custom hooks for state management; Tailwind CSS for responsive UI; category-based routing system.",
+    "challenges": "Coordinating animations across different algorithm types; managing complex state for visualizations; ensuring smooth performance during animations; creating intuitive controls for diverse algorithm families.",
+    "results": "Educational tool that makes abstract algorithms tangible; users can understand algorithm behavior visually; complexity metrics help with analysis; platform supports adding new algorithms easily.",
+    "tags": ["Web", "Frontend", "Education", "Algorithms", "Data Structures"],
+    "category": "Frontend",
+    "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS", "HTML5 Canvas"],
+    "role": "Solo",
+    "year": 2025,
+    "githubUrl": "https://github.com/Nijaek/algorithms-web-visualizations",
+    "liveDemoUrl": "https://algorithm-visualizer.nijae.dev",
+    "thumbnail": "/src/assets/algorithm-visualizer-thumbnail.png",
     "highlighted": true
   }
 ]

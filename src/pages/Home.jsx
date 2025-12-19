@@ -30,8 +30,7 @@ export function Home() {
           </div>
           <div className="stats">
             <div>
-              <strong>Frontend • Backend • ML</strong>
-              <span>cross-discipline</span>
+              <strong>Full-Stack Developer</strong>
             </div>
           </div>
         </div>

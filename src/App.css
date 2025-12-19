@@ -517,6 +517,21 @@ select {
   color: var(--muted);
 }
 
+.detail-thumbnail {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  margin: 20px 0;
+}
+
+.detail-thumbnail img {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
 .detail-meta {
   display: grid;
   gap: 16px;
