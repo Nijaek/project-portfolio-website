@@ -17,7 +17,7 @@
     "year": 2025,
     "githubUrl": "https://github.com/Nijaek/project-portfolio-website",
     "liveDemoUrl": "",
-    "thumbnail": "/src/assets/react-portfolio-thumbnail.png",
+    "thumbnail": "/react-portfolio-thumbnail.png",
     "highlighted": true
   },
   {
@@ -38,7 +38,7 @@
     "year": 2025,
     "githubUrl": "https://github.com/Nijaek/algorithms-web-visualizations",
     "liveDemoUrl": "https://algorithm-visualizer.nijae.dev",
-    "thumbnail": "/src/assets/algorithm-visualizer-thumbnail.png",
+    "thumbnail": "/algorithm-visualizer-thumbnail.png",
     "highlighted": true
   }
 ]
