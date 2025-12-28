@@ -40,5 +40,26 @@
     "liveDemoUrl": "https://algorithm-visualizer.nijae.dev",
     "thumbnail": "/algorithm-visualizer-thumbnail.png",
     "highlighted": true
+  },
+  {
+    "id": "p3",
+    "slug": "flappy-bird-plus",
+    "title": "Flappy Bird Plus",
+    "shortDescription": "Full-stack Flappy Bird clone with user accounts, global leaderboard, cosmetic shop, and points economy.",
+    "fullDescription": "A modern take on the classic Flappy Bird game built with Next.js and canvas rendering. Features a complete user system with Google OAuth and guest accounts, a global leaderboard with nearby rankings, a cosmetic shop with unlockable skins and particle trails, and a points economy earned through gameplay.",
+    "problem": "Classic Flappy Bird lacks persistence, progression systems, and social features that keep players engaged.",
+    "solution": "Built a full-stack game with authentication, persistent high scores, a competitive leaderboard, and a shop system where players earn points to unlock cosmetic customizations.",
+    "architecture": "Next.js 16 with React 19 front end; PostgreSQL database via Prisma ORM; Redis for caching; NextAuth for authentication; Canvas API for game rendering; PM2 for production process management.",
+    "challenges": "Implementing smooth canvas-based game physics; building a secure score submission system with anti-cheat tokens; creating performant particle trail effects; managing real-time leaderboard rankings.",
+    "results": "Engaging game loop with progression incentives; players can compete globally on the leaderboard; cosmetic unlocks provide long-term goals; responsive design works across desktop and mobile.",
+    "tags": ["Web", "Fullstack", "Game", "Canvas"],
+    "category": "Fullstack",
+    "techStack": ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL", "Redis", "NextAuth", "Tailwind CSS", "Canvas API"],
+    "role": "Solo",
+    "year": 2025,
+    "githubUrl": "https://github.com/Nijaek/flappy-bird-plus",
+    "liveDemoUrl": "https://flappy-bird.nijae.dev",
+    "thumbnail": "/flappy-bird-plus-thumbnail.png",
+    "highlighted": true
   }
 ]
