@@ -18,7 +18,7 @@
     "githubUrl": "https://github.com/Nijaek/project-portfolio-website",
     "liveDemoUrl": "",
     "thumbnail": "/react-portfolio-thumbnail.png",
-    "highlighted": true
+    "highlighted": false
   },
   {
     "id": "p2",
@@ -60,6 +60,27 @@
     "githubUrl": "https://github.com/Nijaek/flappy-bird-plus",
     "liveDemoUrl": "https://flappy-bird.nijae.dev",
     "thumbnail": "/flappy-bird-plus-thumbnail.png",
+    "highlighted": true
+  },
+  {
+    "id": "p4",
+    "slug": "vps-guard",
+    "title": "VPSGuard",
+    "shortDescription": "ML-first VPS log security analyzer that detects distributed attacks like botnets and credential stuffing that rule-based tools miss.",
+    "fullDescription": "VPSGuard is an intelligent security analyzer for VPS authentication logs that combines traditional rule-based detection with machine learning to catch sophisticated distributed attacks. Unlike tools like fail2ban that rely solely on pattern matching, VPSGuard uses an IsolationForest ML model trained on clean baseline data to detect anomalous behavior patterns indicative of coordinated botnets, credential stuffing campaigns, and novel attack vectors. Features 7 detection rules, 5 log format parsers, GeoIP integration for geographic velocity detection, a watch daemon for continuous monitoring, and multiple output formats.",
+    "problem": "Traditional security tools like fail2ban use static rules that miss distributed attacks where individual IPs stay under thresholds but collectively pose a threat. Botnets, credential stuffing, and coordinated attacks evade per-IP detection.",
+    "solution": "Built a dual-detection system combining 7 configurable rules with an IsolationForest ML model. Rules catch known patterns while filtering flagged events from ML training data. The ML model learns normal baseline behavior and flags statistical anomalies, catching attacks that rules miss.",
+    "architecture": "Python CLI built with Typer and Rich for terminal output. Modular pipeline: Parsers normalize 5 log formats into AuthEvent objects; RuleEngine applies detection rules; MLEngine extracts 10 features per IP and runs IsolationForest anomaly detection; Reporters output to terminal, JSON, Markdown, or HTML. SQLite persistence for analysis history and watch state. Protocol-based abstractions enable extensibility.",
+    "challenges": "Designing ML features that capture distributed attack patterns (coordinated timing, username entropy, cross-source activity). Preventing baseline poisoning by excluding rule-flagged events from training. Building cross-platform log rotation detection for the watch daemon. Balancing sensitivity to catch real attacks without excessive false positives.",
+    "results": "Detects coordinated botnet attacks that fail2ban misses by analyzing temporal patterns and cross-IP correlation. Explainable anomaly scores show which features drove detection. Watch daemon enables continuous monitoring with configurable alert thresholds. 355 tests ensure reliability across parsers, rules, ML, and reporting.",
+    "tags": ["Security", "Machine Learning", "Backend", "CLI", "DevOps"],
+    "category": "Backend",
+    "techStack": ["Python", "scikit-learn", "NumPy", "SQLite", "Typer", "Rich", "GeoIP2", "TOML"],
+    "role": "Solo",
+    "year": 2025,
+    "githubUrl": "https://github.com/Nijaek/vps-guard",
+    "liveDemoUrl": "",
+    "thumbnail": "/vps-guard-thumbnail.png",
     "highlighted": true
   }
 ]
