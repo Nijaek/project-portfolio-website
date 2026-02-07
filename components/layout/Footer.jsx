@@ -30,7 +30,8 @@ export default function Footer() {
           </a>
           <a
             href="/resume.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-muted transition-colors hover:text-accent no-underline"
           >
             Resume

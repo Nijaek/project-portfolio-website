@@ -49,7 +49,7 @@ export default function HeroSection() {
               </AnimatedButton>
             </StaggerItem>
             <StaggerItem>
-              <AnimatedButton href="/resume.pdf" variant="ghost" download>
+              <AnimatedButton href="/resume.pdf" variant="ghost" target="_blank" rel="noopener noreferrer">
                 Resume
               </AnimatedButton>
             </StaggerItem>
