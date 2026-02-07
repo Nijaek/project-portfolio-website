@@ -1,37 +1,44 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- React + Vite app with routing in `src/App.jsx` and entry in `src/main.jsx`.
-- UI pieces live under `src/components/`; route-level screens under `src/pages/`.
-- Project data is centralized in `src/data/projects.json` (single source of truth, editable without touching React).
-- Reusable data helpers are in `src/hooks/useProjects.js` (filters, search, sort).
-- Global styling is in `src/App.css` and `src/index.css`. Public assets (favicons, resume file) belong in `public/`.
+- Next.js 15 (App Router) with static export. Entry layout in `app/layout.jsx`.
+- Route pages live under `app/` using file-system routing: `app/page.jsx` (Home), `app/projects/page.jsx` (Projects listing), `app/projects/[slug]/page.jsx` (Project detail).
+- Reusable UI components live under `components/` in subdirectories: `layout/`, `background/`, `animation/`, `ui/`, `sections/`.
+- Project data is centralized in `data/projects.json` (single source of truth, editable without touching components).
+- Server-compatible data helpers are in `lib/projects.js`. Animation variants in `lib/animations.js`. Mesh simulation in `lib/mesh.js`.
+- Custom hooks in `hooks/` (`useReducedMotion`, `useMousePosition`).
+- Global styling uses Tailwind CSS v4 with design tokens in `app/globals.css`. Public assets (thumbnails, resume, logo) belong in `public/`.
 
 ## Build, Test, and Development Commands
 - `npm install` — install dependencies.
-- `npm run dev` — start the Vite dev server with hot reload.
-- `npm run build` — production build; also the quickest sanity check before pushing.
-- `npm run preview` — serve the production build locally.
-- `npm run lint` — run ESLint across the project; fix warnings before commits.
+- `npm run dev` — start the Next.js dev server with hot reload.
+- `npm run build` — production static export to `out/` directory.
+- `npm run start` — serve the production build locally.
+- `npm run lint` — run ESLint (next/core-web-vitals) across the project.
 
 ## Coding Style & Naming Conventions
 - Use functional React components and hooks; keep components small and composable.
+- Server components are the default. Add `'use client'` only when needed (hooks, event handlers, browser APIs).
 - Prefer descriptive names: `PascalCase` for components/files, `camelCase` for variables/functions, hyphenated slugs/paths.
-- Keep layout/content props explicit; avoid implicit globals. Co-locate component-specific styles or use existing utility classes.
+- Use Tailwind utility classes. Design tokens defined as `@theme inline` CSS custom properties.
 - Favor semantic HTML elements and accessible attributes (aria labels, focus states).
-- Follow the light-theme tokens in `App.css`; optional dark mode via `[data-theme='dark']` token overrides.
+- Animation components use `motion` (Framer Motion). Centralized variants in `lib/animations.js`.
 
 ## Testing Guidelines
 - No dedicated test runner is wired yet; rely on `npm run build` and manual checks in dev server.
-- When adding tests, align file names with the component (e.g., `ComponentName.test.jsx`) and keep them near the source.
-- Smoke-test routing (`/`, `/projects`, `/projects/:slug`) after data changes to ensure slugs resolve.
+- Smoke-test all routes (`/`, `/projects`, `/projects/:slug`, 404) after changes.
+- Verify static export produces correct files in `out/`.
 
 ## Commit & Pull Request Guidelines
 - Write concise, present-tense commits (e.g., "Add project filters", "Wire project detail route").
-- Pull requests should include: summary of changes, screenshots or GIFs for UI updates, and steps to validate (`npm run build` or key user flows).
-- Link issues when applicable; call out breaking changes or config steps (e.g., adding `public/resume.pdf`).
+- Pull requests should include: summary of changes, screenshots or GIFs for UI updates, and steps to validate.
+- Link issues when applicable; call out breaking changes or config steps.
 
 ## Data & Content Management
-- Add or edit projects only in `src/data/projects.json`. Required fields: `id`, `slug`, `title`, `shortDescription`, `fullDescription`, `problem`, `solution`, `architecture`, `challenges`, `results`, `tags`, `category`, `techStack`, `role`, `year`, `githubUrl`, optional `liveDemoUrl`, and `highlighted`.
+- Add or edit projects only in `data/projects.json`. Required fields: `id`, `slug`, `title`, `shortDescription`, `fullDescription`, `problem`, `solution`, `architecture`, `challenges`, `results`, `tags`, `category`, `techStack`, `role`, `year`, `githubUrl`, optional `liveDemoUrl`, and `highlighted`.
 - Keep slugs URL-safe (lowercase, hyphenated). Toggle `highlighted: true` to feature on the home page.
-- If you add new categories or tags, ensure spelling is consistent to keep filters accurate. Filters support multi-tag selection and category pills; sorting supports date and title.
+- If you add new categories or tags, ensure spelling is consistent to keep filters accurate.
+
+## Server vs Client Components
+- Server components: `app/layout.jsx`, `app/page.jsx`, `app/projects/page.jsx`, `app/projects/[slug]/page.jsx`, `Footer`
+- Client components (`'use client'`): `NavBar`, `PageTransition`, `GeometricMesh`, all `animation/*`, all `sections/*`, `ProjectFilters`

@@ -1,3 +1,10 @@
+# Dependencies
+node_modules
+
+# Next.js
+.next
+out
+
 # Logs
 logs
 *.log
@@ -5,12 +12,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Local env files
 *.local
+.env*.local
 
 # Editor directories and files
 .vscode/*
@@ -25,4 +30,3 @@ dist-ssr
 
 # Personal assets
 public/resume.pdf
-public/logo.png
