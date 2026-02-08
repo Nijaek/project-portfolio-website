@@ -40,7 +40,7 @@ export default function ProjectFilters({ projects, allTags, allCategories }) {
     result.sort((a, b) => {
       let cmp = 0;
       if (sortField === 'year') cmp = a.year - b.year;
-      else if (sortField === 'title') cmp = a.title.localeCompare(b.title);
+      else if (sortField === 'title') cmp = b.title.localeCompare(a.title);
       return sortDirection === 'desc' ? -cmp : cmp;
     });
 
@@ -141,7 +141,7 @@ export default function ProjectFilters({ projects, allTags, allCategories }) {
           >
             {sortField === 'year'
               ? sortDirection === 'desc' ? '↓ Newest' : '↑ Oldest'
-              : sortDirection === 'asc' ? '↓ A–Z' : '↑ Z–A'}
+              : sortDirection === 'desc' ? '↓ A–Z' : '↑ Z–A'}
           </button>
           {hasFilters && (
             <button
