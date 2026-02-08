@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
@@ -16,9 +17,7 @@ export default function NavBar() {
     <nav className="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3 no-underline">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-2 text-xs font-bold text-white">
-            NK
-          </span>
+          <Image src="/favicon.svg" alt="NK logo" width={32} height={32} />
           <div>
             <span className="text-lg font-bold text-text">Nijae King</span>
             <span className="ml-3 hidden text-sm text-muted sm:inline">

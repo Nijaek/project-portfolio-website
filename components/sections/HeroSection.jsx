@@ -66,7 +66,7 @@ export default function HeroSection() {
                 interactive visualizers and real-time games to security analysis platforms.
               </p>
               <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted">
-                Tech I Work With
+                Tech Stack
               </h3>
               <motion.div
                 variants={staggerContainer}
