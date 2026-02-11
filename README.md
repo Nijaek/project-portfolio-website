@@ -47,3 +47,7 @@ Rules:
 - The geometric mesh background renders ~80 nodes on desktop, ~30 on mobile.
 - All animations respect `prefers-reduced-motion`.
 - Run `npm run build` before pushing to confirm all routes export correctly.
+
+## License
+
+[MIT](LICENSE)
