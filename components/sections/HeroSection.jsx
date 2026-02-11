@@ -35,7 +35,7 @@ export default function HeroSection() {
           <ScrollReveal className="mt-6">
             <p className="max-w-lg text-lg text-muted">
               Hi, I&apos;m <GradientText>Nijae King</GradientText> — a software engineer
-              who turns ideas into polished, performant applications.
+              who builds things people actually enjoy using.
             </p>
           </ScrollReveal>
 

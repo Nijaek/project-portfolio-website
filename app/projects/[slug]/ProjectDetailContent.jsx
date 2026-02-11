@@ -10,6 +10,7 @@ import AnimatedCard from '@/components/ui/AnimatedCard';
 import AnimatedButton from '@/components/ui/AnimatedButton';
 import GlassCard from '@/components/ui/GlassCard';
 import TechPill from '@/components/ui/TechPill';
+import ProjectThumbnail from '@/components/ui/ProjectThumbnail';
 import { staggerContainer, fadeUp, slideInLeft, slideInRight } from '@/lib/animations';
 
 function Section({ title, content }) {
@@ -89,18 +90,9 @@ export default function ProjectDetailContent({ project, related }) {
       </div>
 
       {/* Thumbnail */}
-      {project.thumbnail && (
-        <ScrollReveal className="mb-10">
-          <div className="overflow-hidden rounded-2xl border border-white/10">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={project.thumbnail}
-              alt={project.title}
-              className="w-full object-cover"
-            />
-          </div>
-        </ScrollReveal>
-      )}
+      <ScrollReveal className="mb-10">
+        <ProjectThumbnail thumbnail={project.thumbnail} title={project.title} variant="detail" />
+      </ScrollReveal>
 
       {/* Tech stack */}
       <ScrollReveal className="mb-10">

@@ -8,6 +8,7 @@ import StaggerContainer from '@/components/animation/StaggerContainer';
 import StaggerItem from '@/components/animation/StaggerItem';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import TextReveal from '@/components/animation/TextReveal';
+import ProjectThumbnail from '@/components/ui/ProjectThumbnail';
 
 export default function ProjectFilters({ projects, allTags, allCategories }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -169,17 +170,7 @@ export default function ProjectFilters({ projects, allTags, allCategories }) {
             <StaggerItem key={project.slug}>
               <Link href={`/projects/${project.slug}`} className="block no-underline">
                 <AnimatedCard className="flex h-full flex-col overflow-hidden">
-                  {project.thumbnail && (
-                    <div className="relative aspect-video w-full overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={project.thumbnail}
-                        alt={project.title}
-                        className="h-full w-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
+                  <ProjectThumbnail thumbnail={project.thumbnail} title={project.title} />
                   <div className="flex flex-1 flex-col p-5">
                     <div className="mb-2 flex items-center gap-2 text-xs text-muted">
                       <span>{project.category}</span>
@@ -204,26 +195,32 @@ export default function ProjectFilters({ projects, allTags, allCategories }) {
                     </div>
                     <div className="flex gap-3">
                       {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs text-muted hover:text-accent no-underline"
-                          onClick={(e) => e.stopPropagation()}
+                        <span
+                          role="link"
+                          tabIndex={0}
+                          className="cursor-pointer text-xs text-muted hover:text-accent"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+                          }}
                         >
                           GitHub
-                        </a>
+                        </span>
                       )}
                       {project.liveDemoUrl && (
-                        <a
-                          href={project.liveDemoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs text-muted hover:text-accent-2 no-underline"
-                          onClick={(e) => e.stopPropagation()}
+                        <span
+                          role="link"
+                          tabIndex={0}
+                          className="cursor-pointer text-xs text-muted hover:text-accent-2"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(project.liveDemoUrl, '_blank', 'noopener,noreferrer');
+                          }}
                         >
                           Live Demo
-                        </a>
+                        </span>
                       )}
                     </div>
                   </div>

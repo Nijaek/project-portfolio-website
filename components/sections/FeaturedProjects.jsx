@@ -6,6 +6,7 @@ import StaggerContainer from '@/components/animation/StaggerContainer';
 import StaggerItem from '@/components/animation/StaggerItem';
 import AnimatedCard from '@/components/ui/AnimatedCard';
 import TechPill from '@/components/ui/TechPill';
+import ProjectThumbnail from '@/components/ui/ProjectThumbnail';
 import AnimatedButton from '@/components/ui/AnimatedButton';
 import { motion, staggerContainer } from '@/lib/animations';
 
@@ -24,17 +25,7 @@ export default function FeaturedProjects({ projects }) {
             <StaggerItem key={project.slug}>
               <Link href={`/projects/${project.slug}`} className="block no-underline">
                 <AnimatedCard className="flex h-full flex-col overflow-hidden">
-                  {project.thumbnail && (
-                    <div className="relative aspect-video w-full overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={project.thumbnail}
-                        alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
+                  <ProjectThumbnail thumbnail={project.thumbnail} title={project.title} />
                   <div className="flex flex-1 flex-col p-5">
                     <div className="mb-2 flex items-center gap-2 text-xs text-muted">
                       <span>{project.category}</span>
