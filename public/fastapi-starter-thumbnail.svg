@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blueGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- Code editor panel -->
+  <rect x="60" y="60" width="680" height="600" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Editor title bar -->
+  <rect x="60" y="60" width="680" height="44" rx="12" fill="#1e293b"/>
+  <rect x="60" y="92" width="680" height="12" fill="#1e293b"/>
+  <circle cx="88" cy="82" r="7" fill="#ef4444" opacity="0.8"/>
+  <circle cx="112" cy="82" r="7" fill="#eab308" opacity="0.8"/>
+  <circle cx="136" cy="82" r="7" fill="#22c55e" opacity="0.8"/>
+  <text x="400" y="87" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="13">main.py</text>
+
+  <!-- Line numbers -->
+  <text x="88" y="140" fill="#475569" font-family="monospace" font-size="14">1</text>
+  <text x="88" y="168" fill="#475569" font-family="monospace" font-size="14">2</text>
+  <text x="88" y="196" fill="#475569" font-family="monospace" font-size="14">3</text>
+  <text x="88" y="224" fill="#475569" font-family="monospace" font-size="14">4</text>
+  <text x="88" y="252" fill="#475569" font-family="monospace" font-size="14">5</text>
+  <text x="88" y="280" fill="#475569" font-family="monospace" font-size="14">6</text>
+  <text x="88" y="308" fill="#475569" font-family="monospace" font-size="14">7</text>
+  <text x="88" y="336" fill="#475569" font-family="monospace" font-size="14">8</text>
+  <text x="88" y="364" fill="#475569" font-family="monospace" font-size="14">9</text>
+  <text x="80" y="392" fill="#475569" font-family="monospace" font-size="14">10</text>
+  <text x="80" y="420" fill="#475569" font-family="monospace" font-size="14">11</text>
+  <text x="80" y="448" fill="#475569" font-family="monospace" font-size="14">12</text>
+  <text x="80" y="476" fill="#475569" font-family="monospace" font-size="14">13</text>
+  <text x="80" y="504" fill="#475569" font-family="monospace" font-size="14">14</text>
+  <text x="80" y="532" fill="#475569" font-family="monospace" font-size="14">15</text>
+  <text x="80" y="560" fill="#475569" font-family="monospace" font-size="14">16</text>
+  <text x="80" y="588" fill="#475569" font-family="monospace" font-size="14">17</text>
+  <text x="80" y="616" fill="#475569" font-family="monospace" font-size="14">18</text>
+  <text x="80" y="644" fill="#475569" font-family="monospace" font-size="14">19</text>
+
+  <!-- Code content -->
+  <!-- Line 1: from fastapi import FastAPI -->
+  <text x="116" y="140" fill="#c084fc" font-family="monospace" font-size="14">from</text>
+  <text x="156" y="140" fill="#f1f5f9" font-family="monospace" font-size="14"> fastapi </text>
+  <text x="232" y="140" fill="#c084fc" font-family="monospace" font-size="14">import</text>
+  <text x="284" y="140" fill="#22d3ee" font-family="monospace" font-size="14"> FastAPI</text>
+
+  <!-- Line 2: blank -->
+
+  <!-- Line 3: app = FastAPI(title="...") -->
+  <text x="116" y="196" fill="#f1f5f9" font-family="monospace" font-size="14">app </text>
+  <text x="148" y="196" fill="#c084fc" font-family="monospace" font-size="14">=</text>
+  <text x="160" y="196" fill="#22d3ee" font-family="monospace" font-size="14"> FastAPI</text>
+  <text x="228" y="196" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="238" y="196" fill="#f1f5f9" font-family="monospace" font-size="14">title</text>
+  <text x="282" y="196" fill="#c084fc" font-family="monospace" font-size="14">=</text>
+  <text x="292" y="196" fill="#fbbf24" font-family="monospace" font-size="14">"FastAPI Starter"</text>
+  <text x="444" y="196" fill="#94a3b8" font-family="monospace" font-size="14">)</text>
+
+  <!-- Line 4: blank -->
+
+  <!-- Line 5: @app.get("/health") -->
+  <text x="116" y="252" fill="#059669" font-family="monospace" font-size="14">@app.get</text>
+  <text x="184" y="252" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="194" y="252" fill="#fbbf24" font-family="monospace" font-size="14">"/health"</text>
+  <text x="274" y="252" fill="#94a3b8" font-family="monospace" font-size="14">)</text>
+
+  <!-- Line 6: async def health_check(): -->
+  <text x="116" y="280" fill="#c084fc" font-family="monospace" font-size="14">async def</text>
+  <text x="200" y="280" fill="#60a5fa" font-family="monospace" font-size="14"> health_check</text>
+  <text x="318" y="280" fill="#94a3b8" font-family="monospace" font-size="14">():</text>
+
+  <!-- Line 7: return {"status": "ok"} -->
+  <text x="140" y="308" fill="#c084fc" font-family="monospace" font-size="14">return</text>
+  <text x="192" y="308" fill="#94a3b8" font-family="monospace" font-size="14"> {</text>
+  <text x="210" y="308" fill="#fbbf24" font-family="monospace" font-size="14">"status"</text>
+  <text x="278" y="308" fill="#94a3b8" font-family="monospace" font-size="14">:</text>
+  <text x="290" y="308" fill="#fbbf24" font-family="monospace" font-size="14"> "ok"</text>
+  <text x="328" y="308" fill="#94a3b8" font-family="monospace" font-size="14">}</text>
+
+  <!-- Line 8: blank -->
+
+  <!-- Line 9: @app.post("/auth/login") -->
+  <text x="116" y="364" fill="#059669" font-family="monospace" font-size="14">@app.post</text>
+  <text x="196" y="364" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="206" y="364" fill="#fbbf24" font-family="monospace" font-size="14">"/auth/login"</text>
+  <text x="316" y="364" fill="#94a3b8" font-family="monospace" font-size="14">)</text>
+
+  <!-- Line 10: async def login(creds: LoginSchema): -->
+  <text x="116" y="392" fill="#c084fc" font-family="monospace" font-size="14">async def</text>
+  <text x="200" y="392" fill="#60a5fa" font-family="monospace" font-size="14"> login</text>
+  <text x="248" y="392" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="258" y="392" fill="#f1f5f9" font-family="monospace" font-size="14">creds</text>
+  <text x="302" y="392" fill="#94a3b8" font-family="monospace" font-size="14">:</text>
+  <text x="314" y="392" fill="#22d3ee" font-family="monospace" font-size="14"> LoginSchema</text>
+  <text x="420" y="392" fill="#94a3b8" font-family="monospace" font-size="14">):</text>
+
+  <!-- Line 11: user = await verify(creds) -->
+  <text x="140" y="420" fill="#f1f5f9" font-family="monospace" font-size="14">user </text>
+  <text x="180" y="420" fill="#c084fc" font-family="monospace" font-size="14">=</text>
+  <text x="192" y="420" fill="#c084fc" font-family="monospace" font-size="14"> await</text>
+  <text x="244" y="420" fill="#60a5fa" font-family="monospace" font-size="14"> verify</text>
+  <text x="296" y="420" fill="#94a3b8" font-family="monospace" font-size="14">(creds)</text>
+
+  <!-- Line 12: return create_tokens(user) -->
+  <text x="140" y="448" fill="#c084fc" font-family="monospace" font-size="14">return</text>
+  <text x="192" y="448" fill="#60a5fa" font-family="monospace" font-size="14"> create_tokens</text>
+  <text x="310" y="448" fill="#94a3b8" font-family="monospace" font-size="14">(user)</text>
+
+  <!-- Line 13: blank -->
+
+  <!-- Line 14: @app.get("/users/me") -->
+  <text x="116" y="504" fill="#059669" font-family="monospace" font-size="14">@app.get</text>
+  <text x="184" y="504" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="194" y="504" fill="#fbbf24" font-family="monospace" font-size="14">"/users/me"</text>
+  <text x="290" y="504" fill="#94a3b8" font-family="monospace" font-size="14">)</text>
+
+  <!-- Line 15: async def me(user: User = Depends(...)): -->
+  <text x="116" y="532" fill="#c084fc" font-family="monospace" font-size="14">async def</text>
+  <text x="200" y="532" fill="#60a5fa" font-family="monospace" font-size="14"> me</text>
+  <text x="222" y="532" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="232" y="532" fill="#f1f5f9" font-family="monospace" font-size="14">user</text>
+  <text x="268" y="532" fill="#94a3b8" font-family="monospace" font-size="14">:</text>
+  <text x="280" y="532" fill="#22d3ee" font-family="monospace" font-size="14"> User</text>
+  <text x="316" y="532" fill="#c084fc" font-family="monospace" font-size="14"> =</text>
+  <text x="330" y="532" fill="#60a5fa" font-family="monospace" font-size="14"> Depends</text>
+  <text x="396" y="532" fill="#94a3b8" font-family="monospace" font-size="14">(auth)):</text>
+
+  <!-- Line 16: return user -->
+  <text x="140" y="560" fill="#c084fc" font-family="monospace" font-size="14">return</text>
+  <text x="192" y="560" fill="#f1f5f9" font-family="monospace" font-size="14"> user</text>
+
+  <!-- Line 17: blank -->
+
+  <!-- Line 18: @app.post("/users", status_code=201) -->
+  <text x="116" y="616" fill="#059669" font-family="monospace" font-size="14">@app.post</text>
+  <text x="196" y="616" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="206" y="616" fill="#fbbf24" font-family="monospace" font-size="14">"/users"</text>
+  <text x="274" y="616" fill="#94a3b8" font-family="monospace" font-size="14">,</text>
+  <text x="286" y="616" fill="#f1f5f9" font-family="monospace" font-size="14"> status_code</text>
+  <text x="382" y="616" fill="#c084fc" font-family="monospace" font-size="14">=</text>
+  <text x="394" y="616" fill="#fbbf24" font-family="monospace" font-size="14">201</text>
+  <text x="420" y="616" fill="#94a3b8" font-family="monospace" font-size="14">)</text>
+
+  <!-- Line 19: async def register(data: RegisterSchema): -->
+  <text x="116" y="644" fill="#c084fc" font-family="monospace" font-size="14">async def</text>
+  <text x="200" y="644" fill="#60a5fa" font-family="monospace" font-size="14"> register</text>
+  <text x="274" y="644" fill="#94a3b8" font-family="monospace" font-size="14">(</text>
+  <text x="284" y="644" fill="#f1f5f9" font-family="monospace" font-size="14">data</text>
+  <text x="320" y="644" fill="#94a3b8" font-family="monospace" font-size="14">:</text>
+  <text x="332" y="644" fill="#22d3ee" font-family="monospace" font-size="14"> RegisterSchema</text>
+  <text x="454" y="644" fill="#94a3b8" font-family="monospace" font-size="14">):</text>
+
+  <!-- Right side: Feature icon badges -->
+
+  <!-- Lock icon - JWT Auth -->
+  <g transform="translate(850, 100)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#60a5fa" opacity="0.05"/>
+    <!-- Lock body -->
+    <rect x="22" y="26" width="20" height="16" rx="3" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <!-- Lock shackle -->
+    <path d="M26 26 V20 A6 6 0 0 1 38 20 V26" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <text x="54" y="35" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">JWT Auth</text>
+    <circle cx="32" cy="34" r="2" fill="#60a5fa"/>
+  </g>
+
+  <!-- Database icon - PostgreSQL -->
+  <g transform="translate(850, 200)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#22d3ee" opacity="0.05"/>
+    <!-- Database cylinder -->
+    <ellipse cx="32" cy="22" rx="12" ry="5" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <path d="M20 22 V38" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <path d="M44 22 V38" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <ellipse cx="32" cy="38" rx="12" ry="5" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <text x="54" y="35" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Postgres</text>
+  </g>
+
+  <!-- Lightning bolt - Redis -->
+  <g transform="translate(850, 300)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#f59e0b" opacity="0.05"/>
+    <!-- Lightning bolt -->
+    <path d="M36 14 L26 32 H34 L28 46 L42 28 H34 Z" fill="#f59e0b" opacity="0.9"/>
+    <text x="54" y="35" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Redis</text>
+  </g>
+
+  <!-- Container - Docker -->
+  <g transform="translate(850, 400)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#38bdf8" opacity="0.05"/>
+    <!-- Docker whale simplified -->
+    <rect x="20" y="28" width="8" height="6" rx="1" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="30" y="28" width="8" height="6" rx="1" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="20" y="20" width="8" height="6" rx="1" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="30" y="20" width="8" height="6" rx="1" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="40" y="28" width="8" height="6" rx="1" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <path d="M16 36 Q18 38 22 38 H48 Q52 38 52 34" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="54" y="35" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Docker</text>
+  </g>
+
+  <!-- Rate Limit - Shield -->
+  <g transform="translate(850, 500)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#a78bfa" opacity="0.05"/>
+    <!-- Shield icon -->
+    <path d="M32 16 L20 22 V32 C20 38 25 43 32 46 C39 43 44 38 44 32 V22 Z" fill="none" stroke="#a78bfa" stroke-width="2"/>
+    <path d="M27 30 L31 34 L38 26" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="54" y="30" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Rate</text>
+    <text x="54" y="44" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Limit</text>
+  </g>
+
+  <!-- Alembic - Migration -->
+  <g transform="translate(1060, 150)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#34d399" opacity="0.05"/>
+    <!-- Migration arrows -->
+    <path d="M22 22 H40" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <path d="M36 18 L42 22 L36 26" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 34 H24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+    <path d="M28 30 L22 34 L28 38" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="54" y="30" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Alembic</text>
+    <text x="54" y="44" fill="#94a3b8" font-family="monospace" font-size="11">migrations</text>
+  </g>
+
+  <!-- Pydantic - Validation -->
+  <g transform="translate(1060, 300)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#fb923c" opacity="0.05"/>
+    <!-- Type check icon -->
+    <text x="20" y="38" fill="#fb923c" font-family="monospace" font-size="20" font-weight="bold">{ }</text>
+    <text x="58" y="30" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Pydantic</text>
+    <text x="58" y="44" fill="#94a3b8" font-family="monospace" font-size="11">schemas</text>
+  </g>
+
+  <!-- Async icon -->
+  <g transform="translate(1060, 450)">
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="0" y="0" width="160" height="60" rx="10" fill="#60a5fa" opacity="0.05"/>
+    <!-- Async symbol (interleaved arrows) -->
+    <path d="M20 24 Q32 18 44 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+    <path d="M40 21 L44 24 L40 27" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M44 36 Q32 42 20 36" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+    <path d="M24 33 L20 36 L24 39" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="30" fill="#f1f5f9" font-family="monospace" font-size="13" font-weight="bold">Async</text>
+    <text x="58" y="44" fill="#94a3b8" font-family="monospace" font-size="11">SQLAlchemy</text>
+  </g>
+
+  <!-- Decorative connecting lines between badges -->
+  <line x1="1010" y1="130" x2="1060" y2="170" stroke="#1e293b" stroke-width="1" opacity="0.5"/>
+  <line x1="1010" y1="330" x2="1060" y2="320" stroke="#1e293b" stroke-width="1" opacity="0.5"/>
+  <line x1="1010" y1="430" x2="1060" y2="460" stroke="#1e293b" stroke-width="1" opacity="0.5"/>
+
+  <!-- Subtle accent glow behind code panel -->
+  <ellipse cx="400" cy="360" rx="300" ry="250" fill="#60a5fa" opacity="0.02"/>
+</svg>

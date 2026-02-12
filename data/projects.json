@@ -101,7 +101,7 @@
     "year": 2026,
     "githubUrl": "https://github.com/Nijaek/fastapi-starter",
     "liveDemoUrl": "",
-    "thumbnail": "",
+    "thumbnail": "/fastapi-starter-thumbnail.svg",
     "highlighted": false
   },
   {
@@ -122,7 +122,7 @@
     "year": 2026,
     "githubUrl": "https://github.com/Nijaek/analytics-dashboard",
     "liveDemoUrl": "",
-    "thumbnail": "",
+    "thumbnail": "/analytics-dashboard-thumbnail.svg",
     "highlighted": true
   }
 ]

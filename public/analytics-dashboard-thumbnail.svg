@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="chartGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#1e293b" opacity="0.5"/>
+    </pattern>
+    <clipPath id="chartClip">
+      <rect x="80" y="310" width="820" height="340"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+
+  <!-- Dashboard sidebar -->
+  <rect x="0" y="0" width="60" height="720" fill="#0f172a"/>
+  <line x1="60" y1="0" x2="60" y2="720" stroke="#1e293b" stroke-width="1"/>
+  <!-- Sidebar icons -->
+  <rect x="18" y="24" width="24" height="4" rx="2" fill="#60a5fa"/>
+  <rect x="18" y="32" width="16" height="4" rx="2" fill="#60a5fa" opacity="0.5"/>
+  <!-- Nav dots -->
+  <circle cx="30" cy="80" r="4" fill="#60a5fa" opacity="0.8"/>
+  <circle cx="30" cy="110" r="4" fill="#475569" opacity="0.5"/>
+  <circle cx="30" cy="140" r="4" fill="#475569" opacity="0.5"/>
+  <circle cx="30" cy="170" r="4" fill="#475569" opacity="0.5"/>
+  <circle cx="30" cy="200" r="4" fill="#475569" opacity="0.5"/>
+
+  <!-- Top header bar -->
+  <rect x="60" y="0" width="1220" height="56" fill="#0f172a"/>
+  <line x1="60" y1="56" x2="1280" y2="56" stroke="#1e293b" stroke-width="1"/>
+  <text x="88" y="36" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">Analytics Dashboard</text>
+  <!-- Search bar -->
+  <rect x="340" y="16" width="240" height="28" rx="6" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="356" y="35" fill="#475569" font-family="system-ui, sans-serif" font-size="12">Search events...</text>
+  <!-- Time range selector -->
+  <rect x="780" y="16" width="120" height="28" rx="6" fill="#111827" stroke="#1e293b" stroke-width="1"/>
+  <text x="800" y="35" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Last 7 days</text>
+  <path d="M884 28 L890 34 L896 28" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Metric cards row -->
+  <!-- Card 1: Total Events -->
+  <g transform="translate(80, 78)">
+    <rect x="0" y="0" width="210" height="100" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" text-transform="uppercase" letter-spacing="1">Total Events</text>
+    <text x="20" y="66" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="30" font-weight="bold">48,291</text>
+    <text x="20" y="86" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">+12.4%</text>
+    <!-- Mini sparkline -->
+    <polyline points="130,80 140,72 150,76 160,60 170,64 180,48 190,52" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Card 2: Unique Users -->
+  <g transform="translate(310, 78)">
+    <rect x="0" y="0" width="210" height="100" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" letter-spacing="1">Unique Users</text>
+    <text x="20" y="66" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="30" font-weight="bold">3,847</text>
+    <text x="20" y="86" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">+8.2%</text>
+    <polyline points="130,76 140,70 150,74 160,58 170,66 180,54 190,50" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Card 3: Avg Latency -->
+  <g transform="translate(540, 78)">
+    <rect x="0" y="0" width="210" height="100" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" letter-spacing="1">Avg. Latency</text>
+    <text x="20" y="66" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="30" font-weight="bold">24ms</text>
+    <text x="20" y="86" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">-3.1%</text>
+    <polyline points="130,50 140,56 150,52 160,60 170,58 180,66 190,62" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Card 4: Error Rate -->
+  <g transform="translate(770, 78)">
+    <rect x="0" y="0" width="210" height="100" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" letter-spacing="1">Error Rate</text>
+    <text x="20" y="66" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="30" font-weight="bold">0.12%</text>
+    <text x="20" y="86" fill="#22c55e" font-family="system-ui, sans-serif" font-size="12">-0.03%</text>
+    <polyline points="130,54 140,58 150,52 160,56 170,54 180,50 190,52" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- Main chart area -->
+  <rect x="80" y="200" width="820" height="460" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="104" y="232" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Events Over Time</text>
+  <text x="104" y="252" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Page views and custom events, hourly</text>
+
+  <!-- Chart legend -->
+  <circle cx="680" cy="226" r="5" fill="#60a5fa"/>
+  <text x="692" y="230" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Page Views</text>
+  <circle cx="780" cy="226" r="5" fill="#22d3ee"/>
+  <text x="792" y="230" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Custom Events</text>
+
+  <!-- Y-axis labels -->
+  <text x="96" y="295" fill="#475569" font-family="monospace" font-size="10" text-anchor="end">800</text>
+  <text x="96" y="365" fill="#475569" font-family="monospace" font-size="10" text-anchor="end">600</text>
+  <text x="96" y="435" fill="#475569" font-family="monospace" font-size="10" text-anchor="end">400</text>
+  <text x="96" y="505" fill="#475569" font-family="monospace" font-size="10" text-anchor="end">200</text>
+  <text x="96" y="575" fill="#475569" font-family="monospace" font-size="10" text-anchor="end">0</text>
+
+  <!-- Grid lines -->
+  <line x1="110" y1="290" x2="880" y2="290" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="110" y1="360" x2="880" y2="360" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="110" y1="430" x2="880" y2="430" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="110" y1="500" x2="880" y2="500" stroke="#1e293b" stroke-width="0.5"/>
+  <line x1="110" y1="570" x2="880" y2="570" stroke="#1e293b" stroke-width="0.5"/>
+
+  <!-- X-axis labels -->
+  <text x="140" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Mon</text>
+  <text x="270" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Tue</text>
+  <text x="400" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Wed</text>
+  <text x="530" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Thu</text>
+  <text x="660" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Fri</text>
+  <text x="790" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Sat</text>
+  <text x="870" y="600" fill="#475569" font-family="monospace" font-size="10" text-anchor="middle">Sun</text>
+
+  <!-- Chart area fill -->
+  <path d="M140 460 L200 420 L270 380 L340 400 L400 340 L460 320 L530 350 L600 300 L660 280 L720 310 L790 260 L850 290 L870 300 L870 570 L140 570 Z" fill="url(#chartFill)" clip-path="url(#chartClip)"/>
+
+  <!-- Main chart line (page views) -->
+  <polyline points="140,460 200,420 270,380 340,400 400,340 460,320 530,350 600,300 660,280 720,310 790,260 850,290 870,300" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#chartGlow)"/>
+
+  <!-- Secondary chart line (custom events) -->
+  <polyline points="140,520 200,500 270,480 340,490 400,460 460,450 530,470 600,440 660,430 720,445 790,420 850,435 870,440" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+  <!-- Data points on main line -->
+  <circle cx="400" cy="340" r="4" fill="#60a5fa" filter="url(#softGlow)"/>
+  <circle cx="660" cy="280" r="4" fill="#60a5fa" filter="url(#softGlow)"/>
+  <circle cx="790" cy="260" r="4" fill="#60a5fa" filter="url(#softGlow)"/>
+
+  <!-- Tooltip on peak -->
+  <g transform="translate(756, 220)">
+    <rect x="0" y="0" width="72" height="34" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="36" y="16" text-anchor="middle" fill="#f1f5f9" font-family="monospace" font-size="11" font-weight="bold">812</text>
+    <text x="36" y="28" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9">events</text>
+    <!-- Tooltip arrow -->
+    <polygon points="32,34 36,42 40,34" fill="#1e293b"/>
+  </g>
+
+  <!-- Right side: Live feed panel -->
+  <rect x="920" y="200" width="340" height="460" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="944" y="232" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="16" font-weight="bold">Live Feed</text>
+
+  <!-- Pulsing dot -->
+  <circle cx="1040" cy="226" r="4" fill="#22c55e" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1040" cy="226" r="7" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.4">
+    <animate attributeName="r" values="7;12;7" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="1054" y="230" fill="#22c55e" font-family="system-ui, sans-serif" font-size="11">streaming</text>
+
+  <!-- Live feed events -->
+  <g transform="translate(940, 254)">
+    <!-- Event 1 -->
+    <rect x="0" y="0" width="300" height="48" rx="6" fill="#111827"/>
+    <circle cx="16" cy="24" r="4" fill="#60a5fa"/>
+    <text x="30" y="18" fill="#f1f5f9" font-family="monospace" font-size="11">page_view</text>
+    <text x="200" y="18" fill="#475569" font-family="monospace" font-size="10">2s ago</text>
+    <text x="30" y="36" fill="#94a3b8" font-family="monospace" font-size="10">/dashboard — Chrome, US</text>
+  </g>
+
+  <g transform="translate(940, 310)">
+    <!-- Event 2 -->
+    <rect x="0" y="0" width="300" height="48" rx="6" fill="#111827"/>
+    <circle cx="16" cy="24" r="4" fill="#22d3ee"/>
+    <text x="30" y="18" fill="#f1f5f9" font-family="monospace" font-size="11">button_click</text>
+    <text x="200" y="18" fill="#475569" font-family="monospace" font-size="10">5s ago</text>
+    <text x="30" y="36" fill="#94a3b8" font-family="monospace" font-size="10">#signup-cta — Firefox, DE</text>
+  </g>
+
+  <g transform="translate(940, 366)">
+    <!-- Event 3 -->
+    <rect x="0" y="0" width="300" height="48" rx="6" fill="#111827"/>
+    <circle cx="16" cy="24" r="4" fill="#60a5fa"/>
+    <text x="30" y="18" fill="#f1f5f9" font-family="monospace" font-size="11">page_view</text>
+    <text x="200" y="18" fill="#475569" font-family="monospace" font-size="10">8s ago</text>
+    <text x="30" y="36" fill="#94a3b8" font-family="monospace" font-size="10">/pricing — Safari, UK</text>
+  </g>
+
+  <g transform="translate(940, 422)">
+    <!-- Event 4 -->
+    <rect x="0" y="0" width="300" height="48" rx="6" fill="#111827"/>
+    <circle cx="16" cy="24" r="4" fill="#a78bfa"/>
+    <text x="30" y="18" fill="#f1f5f9" font-family="monospace" font-size="11">form_submit</text>
+    <text x="200" y="18" fill="#475569" font-family="monospace" font-size="10">12s ago</text>
+    <text x="30" y="36" fill="#94a3b8" font-family="monospace" font-size="10">#contact-form — Chrome, CA</text>
+  </g>
+
+  <g transform="translate(940, 478)">
+    <!-- Event 5 -->
+    <rect x="0" y="0" width="300" height="48" rx="6" fill="#111827"/>
+    <circle cx="16" cy="24" r="4" fill="#22d3ee"/>
+    <text x="30" y="18" fill="#f1f5f9" font-family="monospace" font-size="11">api_call</text>
+    <text x="200" y="18" fill="#475569" font-family="monospace" font-size="10">15s ago</text>
+    <text x="30" y="36" fill="#94a3b8" font-family="monospace" font-size="10">POST /api/events — SDK</text>
+  </g>
+
+  <g transform="translate(940, 534)">
+    <!-- Event 6 -->
+    <rect x="0" y="0" width="300" height="48" rx="6" fill="#111827"/>
+    <circle cx="16" cy="24" r="4" fill="#60a5fa"/>
+    <text x="30" y="18" fill="#f1f5f9" font-family="monospace" font-size="11">page_view</text>
+    <text x="200" y="18" fill="#475569" font-family="monospace" font-size="10">18s ago</text>
+    <text x="30" y="36" fill="#94a3b8" font-family="monospace" font-size="10">/docs — Edge, JP</text>
+  </g>
+
+  <!-- Event stream fade-out at bottom -->
+  <rect x="920" y="590" width="340" height="70" rx="0" fill="url(#bg)" opacity="0.8"/>
+  <text x="1090" y="640" text-anchor="middle" fill="#475569" font-family="system-ui, sans-serif" font-size="11">Streaming via WebSocket...</text>
+
+  <!-- Subtle glow accent behind chart -->
+  <ellipse cx="500" cy="400" rx="350" ry="180" fill="#60a5fa" opacity="0.015"/>
+</svg>
