@@ -165,7 +165,10 @@ export default function ProjectFilters({ projects, allTags, allCategories }) {
           No projects match your filters.
         </p>
       ) : (
-        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer
+          key={filtered.map((p) => p.slug).join(',')}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {filtered.map((project) => (
             <StaggerItem key={project.slug}>
               <Link href={`/projects/${project.slug}`} className="block no-underline">
