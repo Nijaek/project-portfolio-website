@@ -103,26 +103,5 @@
     "liveDemoUrl": "",
     "thumbnail": "/fastapi-starter-thumbnail.svg",
     "highlighted": false
-  },
-  {
-    "id": "p6",
-    "slug": "analytics-dashboard",
-    "title": "Analytics Dashboard",
-    "shortDescription": "Self-hosted real-time event analytics platform with a FastAPI backend, Next.js dashboard, Redis streaming pipeline, and a 3KB tracking SDK.",
-    "fullDescription": "A privacy-first, self-hosted analytics platform built as a lightweight alternative to PostHog and Mixpanel. Features a FastAPI backend with Redis Streams for high-throughput event ingestion, a background worker that batch-persists events and computes hourly rollups, WebSocket-powered live event feeds via Redis pub/sub, a Next.js 14 dashboard with Tremor charts, and a dependency-free 3KB JavaScript tracking SDK with automatic page-view tracking and SPA route detection.",
-    "problem": "Third-party analytics platforms raise privacy concerns and cost money at scale, while building analytics from scratch requires solving event ingestion throughput, real-time delivery, and efficient aggregation.",
-    "solution": "Built a self-hosted platform using Redis Streams to decouple high-throughput ingestion from persistence, a background worker for batch writes and pre-computed hourly rollups, Redis pub/sub for real-time WebSocket event streaming, and privacy-first IP hashing with daily-rotating HMAC salts.",
-    "architecture": "FastAPI backend with Redis Streams for event ingestion; background worker for batch persistence and hourly rollup computation; Redis pub/sub fan-out to WebSocket live feeds; async SQLAlchemy 2.0 with PostgreSQL; Next.js 14 App Router dashboard with TanStack Query and Tremor UI; vanilla JavaScript tracking SDK (~3KB) with batching, retry logic, and SPA support; Docker Compose for full-stack deployment.",
-    "challenges": "Designing a Redis Streams pipeline with automatic fallback to direct Postgres writes when Redis is unavailable; computing hourly rollups incrementally without blocking the ingest path; implementing privacy-first IP hashing with daily salt rotation that naturally expires old hashes; building a lightweight SDK with batched sends, exponential backoff retries, and SPA route detection via history API interception.",
-    "results": "High-throughput event ingestion decoupled from persistence via Redis Streams; real-time dashboard with sub-second event delivery over WebSocket; privacy-compliant analytics with no cookies and daily-rotating IP hashes; 98 backend tests and 14 frontend tests; load-tested with Locust to verify ingest throughput.",
-    "tags": ["Web", "Fullstack", "Backend", "Analytics", "Real-time"],
-    "category": "Fullstack",
-    "techStack": ["Python", "FastAPI", "Next.js", "React", "TypeScript", "PostgreSQL", "Redis", "SQLAlchemy", "Docker", "WebSocket", "TanStack Query", "Tailwind CSS"],
-    "role": "Solo",
-    "year": 2026,
-    "githubUrl": "https://github.com/Nijaek/analytics-dashboard",
-    "liveDemoUrl": "",
-    "thumbnail": "/analytics-dashboard-thumbnail.svg",
-    "highlighted": true
   }
 ]
